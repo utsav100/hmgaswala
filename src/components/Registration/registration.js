@@ -33,7 +33,7 @@ class Registration extends React.Component {
       <form onSubmit={this.handleSubmit} className={styles.form} netlify="true">
         <p>
           <label>
-            Name:{" "}
+            Student Name:{" "}
             <input
               type="text"
               name="name"
@@ -44,7 +44,7 @@ class Registration extends React.Component {
         </p>
         <p>
           <label>
-            Email:{" "}
+           Email:{" "}
             <input
               type="email"
               name="email"
