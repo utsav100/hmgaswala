@@ -5,13 +5,13 @@ const styles = {
   title1: css`
     margin: 0;
     ${mediaQueries({
-      fontSize: ["70px", "20vw", "20vw", "250px"]
+      fontSize: ["70px", "20vw", "20vw", "100px"]
     })
     }
   `,
   title2: css`
     ${mediaQueries({
-      fontSize: ["40px", "8vw", "8vw", "120px"]
+      fontSize: ["40px", "8vw", "8vw", "50px"]
     })
   }
     margin: 0;
