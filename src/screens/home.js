@@ -5,7 +5,7 @@ import { AnimatedSection } from "../components/AnimatedSection";
 import image from "../assets/back1.jpg";
 const services = [
   {
-    title: "Primary school",
+    title: "Primary education",
     text:
       "You will learn primary education.",
     color: "F1F11E",
