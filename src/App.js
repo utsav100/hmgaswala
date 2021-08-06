@@ -20,13 +20,13 @@ const globalStyling = css`
 const AppRouter = () => (
   <Router>
     <div className={globalStyling}>
-      <Route path="/" component={Navigation} />
+      {/* <Route path="/" component={Navigation} /> */}
       <Route path="/" exact component={Home} />
-      <Route path="/graphic" exact component={Graphic} />
-      <Route path="/seminars" exact component={Seminars} />
+      {/* <Route path="/graphic" exact component={Graphic} />
+      <Route path="/seminars" exact component={Seminars} /> */}
       <Route path="/contact" exact component={Contact} />
-      <Route path="/fashion" exact component={Fashion} />
-      <Route path="/interior" exact component={Interior} />
+      {/* <Route path="/fashion" exact component={Fashion} />
+      <Route path="/interior" exact component={Interior} /> */}
       <Footer />
     </div>
   </Router>
