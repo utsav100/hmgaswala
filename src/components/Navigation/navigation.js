@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import styles from "./styles";
+// import { Link } from "react-router-dom";
+// import styles from "./styles";
 import posed from "react-pose";
 import styled from "react-emotion";
 import variables from "../../config/style-variables";
@@ -55,7 +55,7 @@ class Navigation extends Component {
   }
 
   renderNav() {
-    const { isOpen, theme } = this.state;
+//     const { isOpen, theme } = this.state;
     return (
       <div></div>
       // <div>
