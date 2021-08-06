@@ -1,13 +1,13 @@
 import React from "react";
 import Home from "./screens/home";
-import Graphic from "./screens/graphic";
+// import Graphic from "./screens/graphic";
 import Contact from "./screens/contact";
-import Seminars from "./screens/seminars";
-import Fashion from "./screens/fashion";
-import Interior from "./screens/interior";
+// import Seminars from "./screens/seminars";
+// import Fashion from "./screens/fashion";
+// import Interior from "./screens/interior";
 import { Footer } from "./components/Footer";
 
-import { Navigation } from "./components/Navigation";
+// import { Navigation } from "./components/Navigation";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { css } from "emotion";
 import variables from "./config/style-variables";
