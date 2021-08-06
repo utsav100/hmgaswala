@@ -4,26 +4,26 @@ import styles from "./styles";
 import { Link } from "../Link";
 
 const links = [
-  {
-    header: "Courses",
-    links: [
-      { text: "Interior", link: "#" },
-      { text: "Fashion", link: "#" },
-      { text: "Graphics", link: "#" }
-    ]
-  },
-  {
-    header: "Materials",
-    links: [
-      { text: "Seminars", link: "/seminars" },
-      { text: "Blog", link: "#" },
-      { text: "Freebeis", link: "#" }
-    ]
-  },
-  {
-    header: "School",
-    links: [{ text: "About", link: "#" }, { text: "Contacts", link: "#" }]
-  }
+  // {
+  //   header: "Courses",
+  //   links: [
+  //     { text: "Interior", link: "#" },
+  //     { text: "Fashion", link: "#" },
+  //     { text: "Graphics", link: "#" }
+  //   ]
+  // },
+  // {
+  //   header: "Materials",
+  //   links: [
+  //     { text: "Seminars", link: "/seminars" },
+  //     { text: "Blog", link: "#" },
+  //     { text: "Freebeis", link: "#" }
+  //   ]
+  // },
+  // {
+  //   header: "School",
+  //   links: [{ text: "About", link: "#" }, { text: "Contacts", link: "#" }]
+  // }
 ];
 
 const Footer = () => (
@@ -38,7 +38,7 @@ const Footer = () => (
         </div>
       ))}
     </div>
-    <p className={styles.text}>This is a fake site inspired by <a href="https://www.behance.net/gallery/62337989/Design-School-Landing-with-free-project-file">Farid Shukurov behance project</a> developed by <a href="https://www.louisemoxhay.co.uk">Louise Moxhay</a></p>
+    <p className={styles.text}> developed by <a href="https://hmghaswala.netlify.app/">hmghaswala</a></p>
   </footer>
 );
 
