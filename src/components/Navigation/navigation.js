@@ -57,68 +57,69 @@ class Navigation extends Component {
   renderNav() {
     const { isOpen, theme } = this.state;
     return (
-      <div>
-        <MenuLink
-          onClick={() => this.menuClicked(this.state.theme)}
-          theme={theme}
-          isOpen={isOpen}
-        >
-          <p>{isOpen ? "Close" : "Menu"}</p>
-        </MenuLink>
-        <Nav className={styles.nav} pose={isOpen ? "open" : "closed"} initialPose={'closed'}>
-          <LinkItem className={styles.navHome} linkName={"home"}>
-            <Link
-              onClick={() => this.menuClicked("dark")}
-              className={styles.link}
-              to="/"
-            >
-              Home
-            </Link>
-          </LinkItem>
-          <LinkItem className={styles.navSeminar} linkName={"seminars"}>
-            <Link
-              onClick={() => this.menuClicked("light")}
-              className={styles.link}
-              to="/seminars"
-            >
-              Seminars
-            </Link>
-          </LinkItem>
-          <LinkItem className={styles.navContact} linkName={"contact"}>
-            <Link
-              onClick={() => this.menuClicked("dark")}
-              className={styles.link}
-              to="/contact"
-            >
-              Contact
-            </Link>
-          </LinkItem>
-          <LinkItem className={styles.navCourses} linkName={"course"}>
-            <h2>Courses</h2>
-            <Link
-              onClick={() => this.menuClicked("dark")}
-              className={styles.link}
-              to="/fashion"
-            >
-              Fashion
-            </Link>
-            <Link
-              onClick={() => this.menuClicked("dark")}
-              className={styles.link}
-              to="/interior"
-            >
-              Interior
-            </Link>
-            <Link
-              onClick={() => this.menuClicked("dark")}
-              className={styles.link}
-              to="/graphic"
-            >
-              Graphics
-            </Link>
-          </LinkItem>
-        </Nav>
-      </div>
+      <div></div>
+      // <div>
+      //   {/* <MenuLink
+      //     onClick={() => this.menuClicked(this.state.theme)}
+      //     theme={theme}
+      //     isOpen={isOpen}
+      //   >
+      //     <p>{isOpen ? "Close" : "Menu"}</p>
+      //   </MenuLink>
+      //   <Nav className={styles.nav} pose={isOpen ? "open" : "closed"} initialPose={'closed'}> */}
+      //     <LinkItem className={styles.navHome} linkName={"home"}>
+      //       <Link
+      //         onClick={() => this.menuClicked("dark")}
+      //         className={styles.link}
+      //         to="/"
+      //       >
+      //         Home
+      //       </Link>
+      //     </LinkItem>
+      //     <LinkItem className={styles.navSeminar} linkName={"seminars"}>
+      //       <Link
+      //         onClick={() => this.menuClicked("light")}
+      //         className={styles.link}
+      //         to="/seminars"
+      //       >
+      //         Seminars
+      //       </Link>
+      //     </LinkItem>
+      //     <LinkItem className={styles.navContact} linkName={"contact"}>
+      //       <Link
+      //         onClick={() => this.menuClicked("dark")}
+      //         className={styles.link}
+      //         to="/contact"
+      //       >
+      //         Contact
+      //       </Link>
+      //     </LinkItem>
+      //     <LinkItem className={styles.navCourses} linkName={"course"}>
+      //       <h2>Courses</h2>
+      //       <Link
+      //         onClick={() => this.menuClicked("dark")}
+      //         className={styles.link}
+      //         to="/fashion"
+      //       >
+      //         Fashion
+      //       </Link>
+      //       <Link
+      //         onClick={() => this.menuClicked("dark")}
+      //         className={styles.link}
+      //         to="/interior"
+      //       >
+      //         Interior
+      //       </Link>
+      //       <Link
+      //         onClick={() => this.menuClicked("dark")}
+      //         className={styles.link}
+      //         to="/graphic"
+      //       >
+      //         Graphics
+      //       </Link>
+      //     </LinkItem>
+      //   </Nav>
+      // </div>
     );
   }
 
