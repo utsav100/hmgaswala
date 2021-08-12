@@ -1,84 +1,51 @@
 import React from "react";
-import styles from "./styles";
+import "./App.css";
+import * as emailjs from "emailjs-com";
 
-class Registration extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: "",
-      email: "",
-      message: "",
-      successMessage: false,
-      full: this.props.full
+const SERVICE_ID = "service_6xyy3up";
+const TEMPLATE_ID = "template_oxmyr2p";
+const USER_ID = "user_Zy0vWPfciVYxT7TqEy0z8";
+
+function App() {
+  const [email, setEmail] = React.useState("");
+  const [name, setName] = React.useState("");
+  const [msg, setMsg] = React.useState("");
+
+  function handleClick() {
+    console.log(email)
+    var data = {
+      to_email:email,
     };
-  }
 
-  handleSubmit = e => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encodeURI({ "form-name": "contact", ...this.state })
-    })
-      .then(() => this.setState({ successMessage: true }))
-      .catch(error => alert(error));
-
-    e.preventDefault();
-  };
-
-  handleChange = e => this.setState({ [e.target.name]: e.target.value });
-
-  renderForm = () => {
-    const { name, email, message} = this.state;
-    return (
-      <form onSubmit={this.handleSubmit} className={styles.form} netlify="true">
-        <p>
-          <label>
-            Student Name:{" "}
-            <input
-              type="text"
-              name="name"
-              value={name}
-              onChange={this.handleChange}
-            />
-          </label>
-        </p>
-        <p>
-          <label>
-           Email:{" "}
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={this.handleChange}
-            />
-          </label>
-        </p>
-        <p>
-          <label>
-            Message:{" "}
-            <textarea
-              name="message"
-              value={message}
-              onChange={this.handleChange}
-            />
-          </label>
-        </p>
-        <button type="submit" className={styles.button}>
-          Apply
-        </button>
-      </form>
-    );
-  };
-
-  render() {
-    const { successMessage, full } = this.state;
-    return (
-      <div className={styles.container} style={full ? { height: "100vh" } : {}}>
-        <h1 className={styles.title}>Registration</h1>
-        {successMessage ? <p className={styles.successMessage}>Thank you for getting in touch</p> : this.renderForm()}
-      </div>
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, data, USER_ID).then(
+      function (response) {
+        console.log(response.status, response.text);
+      },
+      function (err) {
+        console.log(err);
+      }
     );
   }
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <p>
+          Enter your email here
+          <input
+            type="email"
+            onChange={(event) => setEmail(event.target.value)}
+placeholder="Email: "
+          ></input>
+          <input type="text" onChange={(event)=> setName(event.target.name)} placeholder="Name: "/>
+          <input type="text" onChange={(event)=> setMsg(event.target.msg)} placeholder="Message: "/>
+          <button type="submit" onClick={handleClick}>
+            Send mail
+          </button>
+        </p>
+      </header>
+    </div>
+  );
 }
 
-export default Registration;
+export default App;
